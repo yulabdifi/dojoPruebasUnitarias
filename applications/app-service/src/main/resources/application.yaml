@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "PetsTest"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+adapter:
+  restconsumer:
+    timeout: 5000
+    base-url: "https://petstore.swagger.io/v2"
+    findByStatus: "/pet/findByStatus?status=available"
+    add: "/pet"
